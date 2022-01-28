@@ -37,8 +37,20 @@ testCart.addPizza(pizza2);
 testCart.addPizza(pizza3);
 
 
-// $(document).ready(function() {
-  // $("form#new-pizza").submit(function(event) {
-  //   event.preventDefault();
+$(document).ready(function() {
+  const inputSize = $("#size").val();
+  const inputCrust = $("#crust").val();
+  let selectTop = $("input[type=checkbox][name=toppings]")
+  let toppings = [];
 
-// });
+  selectTop.change(function() {
+    toppings = toppings
+      .filter(":checked") // Filter out unchecked boxes.
+      .map(function() { // Extract values using jQuery map.
+        return this.value;
+      }) 
+      .get() // Get array.
+
+      console.log(toppings);
+    });
+});

@@ -31,31 +31,31 @@
       <div class="col-sm">
         <h5>Choose toppings:</h5>   <!---make span to display totaled topping cost here-->
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="top1">
+          <input class="form-check-input" name="toppings" type="checkbox" value="" id="top1">
           <label class="form-check-label" for="top1">
             Peperoni
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="top2">
+          <input class="form-check-input" name="toppings" type="checkbox" value="" id="top2">
           <label class="form-check-label" for="top2">
             Sausage
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="top3">
+          <input class="form-check-input" name="toppings" type="checkbox" value="" id="top3">
           <label class="form-check-label" for="top3">
             Mushroom
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="top4">
+          <input class="form-check-input" name="toppings" type="checkbox" value="" id="top4">
           <label class="form-check-label" for="top4">
             Onion
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="top5">
+          <input class="form-check-input" name="toppings" type="checkbox" value="" id="top5">
           <label class="form-check-label" for="top5">
             Extra Cheese
           </label>
@@ -63,12 +63,14 @@
       </div>
       <div class="col-sm">
         <h5></h5>   <!---make span to display pizzas total cost-->
-        <button type="button" class="btn btn-success">Add Pizza</button>
+        <button type="button" class="btn btn-success">Add Pizza</button>   <!--add validation that size and crust options are chosen: default cheese only pizza-->
       </div>
     </div>
     <div class="row">
-      <div class="col-sm">
-        <h5>Current order:</h5>   <!--make style class/id to hide if no pizzas in cart; make span to display cart-->
+      <div id="cart">
+        <div class="col-sm">
+          <h5>Current order:</h5>   <!--make style class/id to hide if no pizzas in cart; make span to display cart-->
+        </div>
       </div>
     </div>
   </div>
