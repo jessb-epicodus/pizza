@@ -68,5 +68,6 @@ $(document).ready(function() {
     let newPizza = new Pizza(inputSize, inputCrust, inputBase);
     userCart.addPizza(newPizza);
     displayOrder(userCart);
+    newPizza.addPrice();
   });
 });
