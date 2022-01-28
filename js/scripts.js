@@ -26,7 +26,6 @@ Cart.prototype.findPizza = function(id) {
   return false;
 };
 
-
 // Pizza
 function Pizza (size, crust, toppings) {
   this.size = size;
@@ -34,22 +33,19 @@ function Pizza (size, crust, toppings) {
   this.base = base;
 }
 
-Pizza.prototype.addedPizza = function() {
-  return this.size + " " + this.crust + " " + this.base;
-};
-
 // --- UI logic ---
 let userCart = new Cart()
 
-function displayOrder(usersPizza) {
+function displayOrder(usersOrder) {
   let usersPizza = $("ul#added-pizza");
   let htmlForAddedPizza = "";
-  Object.keys(usersPizza.addedPizzas).forEach(function(key) {
-    const pizza = usersPizza.findPizza(key);
-    htmlForAddedPizza += "<li id=" + pizza.id + ">" + pizza.size + " " + pizza.crust + " " + pizza.base "</li>";
+  Object.keys(usersOrder.addedPizzas).forEach(function(key) {
+    const pizza = usersOrder.findPizza(key);
+    htmlForAddedPizza += "<li id=" + pizza.id + ">" + pizza.size + " " + pizza.crust + " " + pizza.base + "</li>";
   });
   usersPizza.html(htmlForAddedPizza);
 }
+
 $(document).ready(function() {
   $("form#add-pizza").submit(function(event) {
     event.preventDefault();
