@@ -21,5 +21,9 @@ Pizza.prototype.costCond = function(pizza) {
 }
 
 // --- UI Logic ---
-let pizza = new Pizza ("lg", "sausage");
-pizza.costCond();
+let lgpizza = new Pizza ("lg", "sausage");
+let mdpizza = new Pizza ("med", "peperoni");
+let smpizza = new Pizza ("sm", "cheese");
+lgpizza.costCond();
+mdpizza.costCond();
+smpizza.costCond();
