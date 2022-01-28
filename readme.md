@@ -31,6 +31,16 @@ Test: "Should return new pizza with size, crust & toppings"
 Code: let pizza1 = let pizza1 = new Pizza ("lg", "thin", "cheese");
 Expected Output: Pizza {size: 'lg', crust: 'thin', toppings: 'cheese'}
 
+* Describe: Cart.prototype.addPizza = function(pizza)
+Test: "Should add Pizza to Cart"
+Code:
+let testCart = new Cart();
+let pizza1 = new Pizza ("lg", "thin", "cheese");
+let pizza2 = new Pizza ("lg", "thin", "peperoni");
+let pizza3 = new Pizza ("med", "thick", "pineapple");
+Expected Output: Cart {orderedPizzas: {1: Pizza, 2: Pizza, 3: Pizza}}
+
+
 ## Known Bugs
 
 * No known issues

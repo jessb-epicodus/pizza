@@ -5,10 +5,19 @@
 // --- busness logic ---
 // Cart
 function Cart() {
-  this.pizzas = {};
+  this.orderedPizzas = {};
+  this.currentId = 0;
 }
 
+Cart.prototype.addPizza = function(pizza) {
+  pizza.id = this.assignId();
+  this.orderedPizzas[pizza.id] = pizza;
+};
 
+Cart.prototype.assignId = function() { 
+  this.currentId += 1;
+  return this.currentId;
+};
 
 // Pizza
 function Pizza (size, crust, toppings) {
@@ -23,6 +32,10 @@ let testCart = new Cart();
 let pizza1 = new Pizza ("lg", "thin", "cheese");
 let pizza2 = new Pizza ("lg", "thin", "peperoni");
 let pizza3 = new Pizza ("med", "thick", "pineapple");
+testCart.addPizza(pizza1);
+testCart.addPizza(pizza2);
+testCart.addPizza(pizza3);
+
 
 // $(document).ready(function() {
   // $("form#new-pizza").submit(function(event) {
