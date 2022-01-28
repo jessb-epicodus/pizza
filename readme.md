@@ -1,8 +1,8 @@
-# _TITLE_
+# _Pizza Parlor_
 
-#### By _**Jessica Baker & **_ 
+#### By _**Jessica Baker**_ 
 
-#### _Lesson/ProjectName_
+#### _Pizza Parlor - Epicodus - Object-Oriented JavaScript - Code Review_
 
 ## Technologies Used
 
@@ -15,15 +15,21 @@
 
 ## Description
 
-DESCRIBE
+This website is for a pizza company where a user can choose one or more individual toppings and a size to order a pizza and see the final cost.
 
 ## Setup/Installation Requirements
 
-* Go to _GITLINK_
+* Go to _https://github.com/jessb-epicodus/pizza-parlor.git_
 * Cone this repository to your desktop (or other desired location)
-* Navigate to the top level of the directory called _DIRECTORY_
+* Navigate to the top level of the directory called _pizza-parlor_
 * Open the index.html file in your browser
-* Or copy & paste this link in your brower: _PUBLISHEDLINK_
+* This is not yet published
+
+## Tests
+* Describe: function Pizza (size, crust, toppings)
+Test: "Should return "
+Code: let pizza1 = new Pizza ("lg", "matinee", "adult");
+Expected Output: Pizza {size: 'lg', crust: 'matinee', toppings: 'adult'}
 
 ## Known Bugs
 
