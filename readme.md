@@ -26,20 +26,10 @@ This website is for a pizza company where a user can choose one or more individu
 * This is not yet published
 
 ## Tests
-* Describe: function Pizza (size, crust, toppings)
-Test: "Should return new pizza with size, crust & toppings"
-Code: let pizza1 = let pizza1 = new Pizza ("lg", "thin", "cheese");
-Expected Output: Pizza {size: 'lg', crust: 'thin', toppings: 'cheese'}
-
-* Describe: Cart.prototype.addPizza = function(pizza)
-Test: "Should add Pizza to Cart"
-Code:
-let testCart = new Cart();
-let pizza1 = new Pizza ("lg", "thin", "cheese");
-let pizza2 = new Pizza ("lg", "thin", "peperoni");
-let pizza3 = new Pizza ("med", "thick", "pineapple");
-Expected Output: Cart {orderedPizzas: {1: Pizza, 2: Pizza, 3: Pizza}}
-
+* Describe: function Pizza (size, toppings, price) {}
+Test: "Should return new pizza with size, toppings & price"
+Code: let pizza1 = new Pizza ("lg", "sausage", "15");
+Expected Output: Pizza {size: 'lg', toppings: 'sausage', price:'15'}
 
 ## Known Bugs
 
