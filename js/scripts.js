@@ -5,19 +5,27 @@
 // --- busness logic ---
 // Cart
 function Cart() {
-  this.orderedPizzas = {};
+  this.addedPizzas = {};
   this.currentId = 0;
 }
 
 Cart.prototype.addPizza = function(pizza) {
   pizza.id = this.assignId();
-  this.orderedPizzas[pizza.id] = pizza;
+  this.addedPizzas[pizza.id] = pizza;
 };
 
 Cart.prototype.assignId = function() { 
   this.currentId += 1;
   return this.currentId;
 };
+
+Cart.prototype.findPizza = function(id) {
+  if (this.addedPizzas[id] != undefined) {
+    return this.addedPizzas[id];
+  }
+  return false;
+};
+
 
 // Pizza
 function Pizza (size, crust, toppings) {
@@ -26,12 +34,30 @@ function Pizza (size, crust, toppings) {
   this.base = base;
 }
 
+Pizza.prototype.addedPizza = function() {
+  return this.size + " " + this.crust + " " + this.base;
+};
+
 // --- UI logic ---
+let userCart = new Cart()
+
+function displayOrder(usersPizza) {
+  let usersPizza = $("ul#added-pizza");
+  let htmlForAddedPizza = "";
+  Object.keys(usersPizza.addedPizzas).forEach(function(key) {
+    const pizza = usersPizza.findPizza(key);
+    htmlForAddedPizza += "<li id=" + pizza.id + ">" + pizza.size + " " + pizza.crust + " " + pizza.base "</li>";
+  });
+  usersPizza.html(htmlForAddedPizza);
+}
 $(document).ready(function() {
   $("form#add-pizza").submit(function(event) {
     event.preventDefault();
-  const inputSize = $("input:radio[name=size]:checked").val();
-  const inputCrust = $("input:radio[name=crust]:checked").val();
-  const inputBase = $("input:radio[name=base]:checked").val();
-  })
+    const inputSize = $("input:radio[name=size]:checked").val();
+    const inputCrust = $("input:radio[name=crust]:checked").val();
+    const inputBase = $("input:radio[name=base]:checked").val();
+    let newPizza = new Pizza(inputSize, inputCrust, inputBase);
+    userCart.addPizza(newPizza);
+    displayOrder(userCart);
+  });
 });

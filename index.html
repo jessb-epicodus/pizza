@@ -16,7 +16,7 @@
     <form id="add-pizza">
       <div class="row">
         <div class="col-sm">
-          <h6>Choose size:</h6>   <!---make span to display base cost here-->
+          <h6>Choose size:</h6>
           <input type="radio" name="size" value="sm">  Small<br>
           <input type="radio" name="size" value="md">  Medium<br>
           <input type="radio" name="size" value="lg">  Large<br>
@@ -34,18 +34,9 @@
             <input type="radio" name="base" value="meat">  Meat Lover<br>
             <input type="radio" name="base" value="supreme">  Supreme<br>
         </div>
-        <!-- <div class="col-sm">
-          <h6>Add your favorite toppings:</h6>   <!--make span to display totaled topping cost here-->
-          <!-- <div class="form-check">
-            <input class="form-check-input" name="toppings" type="checkbox" value="" id="top1">
-            <label class="form-check-label" for="top1">
-              Peperoni
-            </label>
-          </div>
-        </div> -->
         <div class="col-sm">
-          <h5></h5>   <!---make span to display pizzas total cost-->
-          <button type="button" class="btn btn-success">Add Pizza</button>   <!--add validation that size and crust & fave or select top options are chosen-->
+          <h5></h5>
+          <button type="submit" class="btn btn-success">Add Pizza</button>
         </div>
       </div>
     </form>
@@ -53,7 +44,9 @@
     <div class="row">
       <div id="cart">
         <div class="col-sm">
-          <h5>Current order:</h5>   <!--make style class/id to hide if no pizzas in cart; make span to display cart-->
+          <h6>Current order:</h6>
+          <ul id="added-pizza">
+          </ul>
         </div>
       </div>
     </div>
