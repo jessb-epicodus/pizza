@@ -23,34 +23,15 @@ Cart.prototype.assignId = function() {
 function Pizza (size, crust, toppings) {
   this.size = size;
   this.crust = crust;
-  this.toppings = toppings;
+  this.base = base;
 }
 
 // --- UI logic ---
-// Tests
-let testCart = new Cart();
-let pizza1 = new Pizza ("lg", "thin", "cheese");
-let pizza2 = new Pizza ("lg", "thin", "peperoni");
-let pizza3 = new Pizza ("med", "thick", "pineapple");
-testCart.addPizza(pizza1);
-testCart.addPizza(pizza2);
-testCart.addPizza(pizza3);
-
-
 $(document).ready(function() {
-  const inputSize = $("#size").val();
-  const inputCrust = $("#crust").val();
-  let selectTop = $("input[type=checkbox][name=toppings]")
-  let toppings = [];
-
-  selectTop.change(function() {
-    toppings = toppings
-      .filter(":checked") // Filter out unchecked boxes.
-      .map(function() { // Extract values using jQuery map.
-        return this.value;
-      }) 
-      .get() // Get array.
-
-      console.log(toppings);
-    });
+  $("form#add-pizza").submit(function(event) {
+    event.preventDefault();
+  const inputSize = $("input:radio[name=size]:checked").val();
+  const inputCrust = $("input:radio[name=crust]:checked").val();
+  const inputBase = $("input:radio[name=base]:checked").val();
+  })
 });
