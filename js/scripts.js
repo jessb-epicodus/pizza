@@ -34,20 +34,17 @@ function Pizza (size, crust, base, price) {
   this.price = price;
 }
 
-Pizza.prototype.eaPrice = function() {
-  let price = 0;
+Pizza.prototype.addPrice = function() {
   if (this.size === "Small") {
-    price += 8;
+    this.price = 8;
   } else if (this.size === "Medium") {
-    price += 10;
+    this.price = 10;
   } else if (this.size === "Large") {
-    price += 12;
-  } 
-
-  // if (this.base === "special") {
-  //   price += (this.price * .25);
-  // }
-
+    this.price = 12;
+  }
+  return this.price
+};
+  // this.addedPizza[id].turnTally = this.addedPizza[id].turnTally + this.addedPizza[id].roll1 + this.addedPizza[id].roll2;
 
 // --- UI logic ---
 let userCart = new Cart()
@@ -57,7 +54,7 @@ function displayOrder(usersOrder) {
   let htmlForAddedPizza = "";
   Object.keys(usersOrder.addedPizzas).forEach(function(key) {
     const pizza = usersOrder.findPizza(key);
-    htmlForAddedPizza += "<li id=" + pizza.id + ">" + pizza.size + " " + pizza.crust + " " + pizza.base + " " + pizza.price + "</li>";
+    htmlForAddedPizza += "<li id=" + pizza.id + ">" + pizza.size + " - " + pizza.crust + " - " + pizza.base + ":   " + pizza.price + "</li>";
   });
   usersPizza.html(htmlForAddedPizza);
 }
