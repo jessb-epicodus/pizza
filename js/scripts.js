@@ -10,5 +10,11 @@ function Pizza (size, toppings, price) {
   this.cost = 0;
 }
 
+Pizza.prototype.costCond = function(pizza) {
+  if (this.size === "lg")
+  this.price = "$10";
+}
+
 // --- UI Logic ---
-let pizza = new Pizza ("lg", "sausage", "15");
+let pizza = new Pizza ("lg", "sausage");
+pizza.costCond();
