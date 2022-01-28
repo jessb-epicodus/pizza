@@ -27,7 +27,7 @@ Cart.prototype.findPizza = function(id) {
 };
 
 // Pizza
-function Pizza (size, crust, toppings) {
+function Pizza (size, crust, base) {
   this.size = size;
   this.crust = crust;
   this.base = base;
@@ -49,9 +49,9 @@ function displayOrder(usersOrder) {
 $(document).ready(function() {
   $("form#add-pizza").submit(function(event) {
     event.preventDefault();
-    const inputSize = $("input:radio[name=size]:checked").val();
-    const inputCrust = $("input:radio[name=crust]:checked").val();
-    const inputBase = $("input:radio[name=base]:checked").val();
+    let inputSize = $("input:radio[name=size]:checked").val();
+    let inputCrust = $("input:radio[name=crust]:checked").val();
+    let inputBase = $("input:radio[name=base]:checked").val();
     let newPizza = new Pizza(inputSize, inputCrust, inputBase);
     userCart.addPizza(newPizza);
     displayOrder(userCart);
