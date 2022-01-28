@@ -8,5 +8,30 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Pizza Parlor</h1>
+    </div>
+  </div>
+  <form id="add-pizza">
+    <div class="row">
+      <div class="col-sm">
+        <h6>Choose size:</h6>
+        <input type="radio" name="size" value="Small">  Small<br>
+        <input type="radio" name="size" value="Medium">  Medium<br>
+        <input type="radio" name="size" value="Large">  Large<br>
+      </div>
+      <div class="col-sm">
+        <h6>Choose toppings:</h6>
+        <input type="radio" name="toppings" value="Cheese">  Cheese<br>
+        <input type="radio" name="toppings" value="Veggie Lover">  Veggie Lover<br>
+        <input type="radio" name="toppings" value="Meat Lover">  Meat Lover<br>
+        <input type="radio" name="toppings" value="Supreme">  Supreme<br>
+      </div>
+      <div class="col-sm">
+        <h5></h5>
+        <button type="submit" class="btn btn-success">Add Pizza</button>
+      </div>
+    </div>
+  </form>
 </body>
