@@ -13,12 +13,11 @@ function Pizza (size, toppings, price) {
 Pizza.prototype.costCond = function(pizza) {
   if (this.size === "lg") {
       this.price = "$15";
-  } if else (this.size === "med") {
+  } else if (this.size === "med") {
     this.price = "$10";
-  } if else (this.size === "sm") {
+  } else if (this.size === "sm") {
     this.price = "$5";
-}
-
+  }
 }
 
 // --- UI Logic ---
