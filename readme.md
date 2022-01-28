@@ -27,9 +27,9 @@ This website is for a pizza company where a user can choose one or more individu
 
 ## Tests
 * Describe: function Pizza (size, crust, toppings)
-Test: "Should return "
-Code: let pizza1 = new Pizza ("lg", "matinee", "adult");
-Expected Output: Pizza {size: 'lg', crust: 'matinee', toppings: 'adult'}
+Test: "Should return new pizza with size, crust & toppings"
+Code: let pizza1 = let pizza1 = new Pizza ("lg", "thin", "cheese");
+Expected Output: Pizza {size: 'lg', crust: 'thin', toppings: 'cheese'}
 
 ## Known Bugs
 

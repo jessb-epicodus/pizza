@@ -8,6 +8,8 @@ function Cart() {
   this.pizzas = {};
 }
 
+
+
 // Pizza
 function Pizza (size, crust, toppings) {
   this.size = size;
@@ -18,11 +20,12 @@ function Pizza (size, crust, toppings) {
 // --- UI logic ---
 // Tests
 let testCart = new Cart();
-let pizza1 = new Pizza ("lg", "matinee", "adult");
-let pizza2 = new Pizza ("lg", "matinee", "senior");
-let pizza3 = new Pizza ("med", "matinee", "child");
+let pizza1 = new Pizza ("lg", "thin", "cheese");
+let pizza2 = new Pizza ("lg", "thin", "peperoni");
+let pizza3 = new Pizza ("med", "thick", "pineapple");
 
 // $(document).ready(function() {
   // $("form#new-pizza").submit(function(event) {
   //   event.preventDefault();
+
 // });
