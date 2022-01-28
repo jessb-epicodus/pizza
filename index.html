@@ -12,44 +12,36 @@
     <h1>Pizza Parlor</h1>
     <div class="row">
       <div class="col-sm">
-        <h5>Choose size:</h5>   <!---make span to display base cost here-->
-        <select class="form-control" id="size">
-          <option> </option>
-          <option>Personal</option>
-          <option>Medium</option>
-          <option>Large</option>
-        </select>
+        <h6>Choose size:</h6>   <!---make span to display base cost here-->
+        <input type="radio" name="size" value="sm">  Small<br>
+        <input type="radio" name="size" value="md">  Medium<br>
+        <input type="radio" name="size" value="lg">  Large<br>
       </div>
       <div class="col-sm">
-        <h5>Choose crust:</h5>
-        <select class="form-control" id="size">
-          <option> </option>
-          <option>Thin</option>
-          <option>Deep-dish</option>
-        </select>
+        <h6>Choose crust:</h6>
+          <input type="radio" name="crust" value="thin">  Thin<br>
+          <input type="radio" name="crust" value="hand">  Hand tossed<br>
+          <input type="radio" name="crust" value="deep">  Deep dish<br>
       </div>
       <div class="col-sm">
-        <h5>Choose from our favorites:</h5>
-        <select class="form-control" id="size">
-          <option> </option>
-          <option>Cheese</option>
-          <option>All Veggie</option>
-          <option>Meat Lovers</option>
-          <option>Supreme</option>
-        </select>
+        <h6>Choose from our favorites:</h6>
+          <input type="radio" name="base" value="cheese">  Cheese<br>
+          <input type="radio" name="base" value="veg">  Veggie Lover<br>
+          <input type="radio" name="base" value="meat">  Meat Lover<br>
+          <input type="radio" name="base" value="supreme">  Supreme<br>
       </div>
       <!-- <div class="col-sm">
-        <h5>Choose From our:</h5>   <!---make span to display totaled topping cost here-->
-        <div class="form-check">
+        <h6>Add your favorite toppings:</h6>   <!--make span to display totaled topping cost here-->
+        <!-- <div class="form-check">
           <input class="form-check-input" name="toppings" type="checkbox" value="" id="top1">
           <label class="form-check-label" for="top1">
             Peperoni
           </label>
-        </div> -->
-      </div>
+        </div>
+      </div> -->
       <div class="col-sm">
         <h5></h5>   <!---make span to display pizzas total cost-->
-        <button type="button" class="btn btn-success">Add Pizza</button>   <!--add validation that size and crust options are chosen: default cheese only pizza-->
+        <button type="button" class="btn btn-success">Add Pizza</button>   <!--add validation that size and crust & fave or select top options are chosen-->
       </div>
     </div>
     <div class="row">
