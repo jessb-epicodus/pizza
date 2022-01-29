@@ -12,25 +12,19 @@ function Pizza (size, toppings, price) {
 
 Pizza.prototype.costCond = function(pizza) {
   if (this.size === "lg") {
-      this.cost = 15;
-  } else if (this.size === "med") {
-    this.cost = 10;
+      this.cost += 15;
+  } else if (this.size === "md") {
+    this.cost += 10;
   } else if (this.size === "sm") {
-    this.cost = 5;
-  } else if (this.base === "veg") {
-    this.cost += 1;
-  } else if (this.base === "supr") {
-    this.cost += 2;
-  } else if (this.base === "meat") {
-    this.cost += 3;
-  }
+    this.cost += 5;
+  };
   return this.cost;
 };
 
 
 // --- UI Logic ---
 // let lgpizza = new Pizza ("lg", "sausage");
-// let mdpizza = new Pizza ("med", "peperoni");
+// let mdpizza = new Pizza ("md", "peperoni");
 // let smpizza = new Pizza ("sm", "cheese");
 // lgpizza.costCond();
 // mdpizza.costCond();
@@ -38,16 +32,16 @@ Pizza.prototype.costCond = function(pizza) {
 
 Pizza.prototype.displayPizza = function () {
   $("#order").show();
-  $("#size").text($("input:radio[name=size]:checked").text());
-  $("#base").text($("input:radio[name=base]:checked").text());
+  $("#size").text($("input:radio[name=size]:checked")).text();
+  $("#base").text($("input:radio[name=base]:checked")).text();
   $("#cost").text(this.cost);
 };
 
 $(document).ready(function(){
-  $("#new-pizza").submit(function(event){
+  $("#add-pizza").submit(function(event){
     event.preventDefault();
-    let size = $("input:radio[name=size]:checked").val();
-    let base = $("input:radio[name=base]:checked").val();
+    let size = $("#size").val();
+    let base = $("#base").val();
     let pizza = new Pizza(size, base);
     pizza.costCond();
     pizza.displayPizza();
