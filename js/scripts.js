@@ -13,20 +13,25 @@ function Pizza (size, toppings, price) {
 Pizza.prototype.costCond = function(pizza) {
   this.cost = 0;
   if (this.size === "lg") {
-      this.cost += 15;
+      this.cost += 12;
   } else if (this.size === "md") {
     this.cost += 10;
   } else if (this.size === "sm") {
-    this.cost += 5;
+    this.cost += 8;
+  };
+  if (this.size === "cheese") {
+    this.cost += 0;
+  } else if (this.size === "special") {
+    this.cost += 2;
   };
   return this.cost;
 };
 
 
 // --- UI Logic ---
-// let lgpizza = new Pizza ("lg", "sausage");
-// let mdpizza = new Pizza ("md", "peperoni");
-// let smpizza = new Pizza ("sm", "cheese");
-// lgpizza.costCond();
-// mdpizza.costCond();
-// smpizza.costCond();
+let lgpizza = new Pizza ("lg", "special");
+let mdpizza = new Pizza ("md", "special");
+let smpizza = new Pizza ("sm", "cheese");
+lgpizza.costCond();
+mdpizza.costCond();
+smpizza.costCond();

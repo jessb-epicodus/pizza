@@ -32,9 +32,9 @@ Code: let pizza1 = new Pizza ("lg", "sausage", "15");
 Expected Output: Pizza {size: 'lg', toppings: 'sausage', price:'15'}
 
 * Describe: prototype.costCond = function(pizza) {}
-Test: "Should return pizza cost based on size"
-Code: let pizza1 = new Pizza ("lg", "sausage");
-Expected Output: Pizza {size: 'lg', toppings: 'sausage', price:'10'}
+Test: "Should return pizza cost based on size & toppings"
+Code: let pizza1 = new Pizza ("lg", "special");
+Expected Output: Pizza {size: 'lg', toppings: 'special', price:'17'}
 
 ## Known Bugs
 
