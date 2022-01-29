@@ -4,9 +4,9 @@
 // Allow the user to choose toppings and size for the pizza they'd like to order.
 
 // --- Business Logic ---
-function Pizza (size, toppings, price) {
+function Pizza (size, base, cost) {
   this.size = size;
-  this.toppings = toppings;
+  this.base = base;
   this.cost = 0;
 }
 
@@ -19,20 +19,28 @@ Pizza.prototype.costCond = function(pizza) {
   } else if (this.size === "sm") {
     this.cost += 8;
   };
-  if (this.size === "cheese") {
+  if (this.base === "cheese") {
     this.cost += 0;
-  } else if (this.size === "special") {
+  } else if (this.base === "special") {
     this.cost += 2;
   };
   return this.cost;
 };
 
-
 // --- UI Logic ---
-let lgpizza = new Pizza ("lg", "special");
-let mdpizza = new Pizza ("md", "special");
-let smpizza = new Pizza ("sm", "cheese");
-lgpizza.costCond();
-mdpizza.costCond();
-smpizza.costCond();
-
+// let lgpizza = new Pizza ("lg", "special");
+// let mdpizza = new Pizza ("md", "special");
+// let smpizza = new Pizza ("sm", "cheese");
+// lgpizza.costCond();
+// mdpizza.costCond();
+// smpizza.costCond();
+$(document).ready(function() {
+  $("#add-pizza").submit(function(event) {
+    event.preventDefault();
+    let inputSize = $("#size").val();
+    let inputBase = $("#base").val();
+    let newPizza = new Pizza(inputSize, inputBase);
+    newPizza.costCond();
+    $("#cost").text("$" + newPizza.cost);
+  })
+})
