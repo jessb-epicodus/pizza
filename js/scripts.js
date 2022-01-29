@@ -11,6 +11,7 @@ function Pizza (size, toppings, price) {
 }
 
 Pizza.prototype.costCond = function(pizza) {
+  this.cost = 0;
   if (this.size === "lg") {
       this.cost += 15;
   } else if (this.size === "md") {
@@ -29,22 +30,3 @@ Pizza.prototype.costCond = function(pizza) {
 // lgpizza.costCond();
 // mdpizza.costCond();
 // smpizza.costCond();
-
-Pizza.prototype.displayPizza = function () {
-  $("#order").show();
-  $("#size").text($("input:radio[name=size]:checked")).text();
-  $("#base").text($("input:radio[name=base]:checked")).text();
-  $("#cost").text(this.cost);
-};
-
-$(document).ready(function(){
-  $("#add-pizza").submit(function(event){
-    event.preventDefault();
-    let size = $("#size").val();
-    let base = $("#base").val();
-    let pizza = new Pizza(size, base);
-    pizza.costCond();
-    pizza.displayPizza();
-  });
-});
-
