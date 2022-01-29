@@ -12,26 +12,66 @@
     <div class="jumbotron">
       <h1>Pizza Parlor</h1>
     </div>
+
+    <form id="add-pizza">
+      <div class="row">
+        <div class="col-sm">
+          <h6>Choose size:</h6>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="sm">
+              Small
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="med">
+              Medium
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="lg">
+              Large
+            </label>
+          </div>
+        </div>
+        <div class="col-sm">
+          <h6>Choose toppings:</h6>
+          <div class="radio">
+            <label>
+              <input type="radio" name="base" value="chz">
+              Cheese
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="base" value="veg">
+              Veggie Lover
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="base" value="meat">
+              Meat Lover
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="base" value="supr">
+              Supreme
+            </label>
+          </div>
+        </div>
+        <div class="col-sm">
+          <button type="submit" class="btn btn-success">Add Pizza</button> 
+          <div id="order">
+            <p>Size: <span id="size"><!--size here--></span> </p>
+            <p>Type: <span id="base"><!--base here--></span> </p>
+            <p>Cost: <span id="cost"><!--cost here--></span> </p>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
-  <form id="add-pizza">
-    <div class="row">
-      <div class="col-sm">
-        <h6>Choose size:</h6>
-        <input type="radio" name="size" value="Small">  Small<br>
-        <input type="radio" name="size" value="Medium">  Medium<br>
-        <input type="radio" name="size" value="Large">  Large<br>
-      </div>
-      <div class="col-sm">
-        <h6>Choose toppings:</h6>
-        <input type="radio" name="toppings" value="Cheese">  Cheese<br>
-        <input type="radio" name="toppings" value="Veggie Lover">  Veggie Lover<br>
-        <input type="radio" name="toppings" value="Meat Lover">  Meat Lover<br>
-        <input type="radio" name="toppings" value="Supreme">  Supreme<br>
-      </div>
-      <div class="col-sm">
-        <h5></h5>
-        <button type="submit" class="btn btn-success">Add Pizza</button>
-      </div>
-    </div>
-  </form>
 </body>
