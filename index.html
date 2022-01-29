@@ -13,6 +13,25 @@
       <h1>Pizza Parlor</h1>
     </div>
     <form id="add-pizza">
+      <h6>Choose size:</h6>
+      <select class="form-control" id="size">
+        <option value=""> </option>
+        <option value="sm">Small</option>
+        <option value="md">Medium</option>
+        <option value="lg">Large</option>
+      </select>
+      <h6>Choose toppings:</h6>
+      <select class="form-control" id="toppings">
+        <option value=""> </option>
+        <option value="cheese">Cheese</option>
+        <option value="special">Veggie Lovers</option>
+        <option value="special">Meat Lovers</option>
+        <option value="special">Supreme</option>
+      </select>
+      <button type="submit" class="btn btn-dark">Add Pizza</button>
     </form>
+    <div id="order">
+      <h6><span id="cost"><!--cost here--></span></h6>
+    </div>  
   </div>
 </body>

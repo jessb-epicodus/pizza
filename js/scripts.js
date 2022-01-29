@@ -35,3 +35,4 @@ let smpizza = new Pizza ("sm", "cheese");
 lgpizza.costCond();
 mdpizza.costCond();
 smpizza.costCond();
+
