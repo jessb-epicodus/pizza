@@ -28,13 +28,28 @@ This website is for a pizza company where a user can choose one or more individu
 ## Tests
 * Describe: function Pizza (size, toppings, price) {}
 Test: "Should return new pizza with size, toppings & price"
-Code: let pizza1 = new Pizza ("lg", "sausage", "15");
-Expected Output: Pizza {size: 'lg', toppings: 'sausage', price:'15'}
+Code: let pizza1 = new Pizza ("large", "cheese", "12");
+Expected Output: Pizza {size: 'large', toppings: 'cheese', price:'12'}
 
 * Describe: prototype.costCond = function(pizza) {}
 Test: "Should return pizza cost based on size & toppings"
-Code: let pizza1 = new Pizza ("lg", "special");
-Expected Output: Pizza {size: 'lg', toppings: 'special', price:'17'}
+Code: let pizza1 = new Pizza ("large", "cheese");
+Expected Output: Pizza {size: 'large', toppings: 'special', price:'12'}
+
+Code: let pizza2 = new Pizza ("medium", "cheese");
+Expected Output: Pizza {size: 'medium', toppings: 'cheese', price:'10'}
+
+Code: let pizza2 = new Pizza ("small", "cheese");
+Expected Output: Pizza {size: 'small', toppings: 'cheese', price:'8'}
+
+Code: let pizza2 = new Pizza ("large", "special");
+Expected Output: Pizza {size: 'large', toppings: 'special', price:'14'}
+
+Code: let pizza2 = new Pizza ("medium", "special");
+Expected Output: Pizza {size: 'medium', toppings: 'special', price:'12'}
+
+Code: let pizza2 = new Pizza ("small", "special");
+Expected Output: Pizza {size: 'small', toppings: 'special', price:'10'}
 
 ## Known Bugs
 
