@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jqscripts.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pizza Parlor</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Pizza Parlor</h1>
+    </div>
+<!--Pizza-->
+  <h4>Build Your Pizza</h4>
+    <form id="add-pizza">
+      <div class="row">
+        <div class="col-sm">
+          <h6>SIZE :</h6>
+          <input type="radio" name="size" value="sm">  Small<br>
+          <input type="radio" name="size" value="md">  Medium<br>
+          <input type="radio" name="size" value="lg">  Large<br>
+        </div>
+        <div class="col-sm">
+          <h6>CRUST :</h6>
+          <input type="radio" name="crust">  Thin<br>
+          <input type="radio" name="crust">  Hand tossed<br>
+          <input type="radio" name="crust">  Deep dish<br>
+        </div>
+        <div class="col-sm">
+          <h6>BASE :</h6>
+          <input type="radio" name="base" value="cheese">  Cheese<br>
+          <input type="radio" name="base" value="special">  Veggie Lover<br>
+          <input type="radio" name="base" value="special">  Meat Lover<br>
+          <input type="radio" name="base" value="special">  Supreme<br>
+        </div>
+        <div class="col-sm">
+          <h6>EXTRAS :</h6>
+          <input type="checkbox" name="toppings" value="veg"> Mushroom<br>
+          <input type="checkbox" name="toppings" value="veg"> Onion<br>
+          <input type="checkbox" name="toppings" value="veg"> Tomato<br>
+          <input type="checkbox" name="toppings" value="veg"> Jalapeno<br>
+          <input type="checkbox" name="toppings" value="meat"> Pepperoni<br>
+          <input type="checkbox" name="toppings" value="meat"> Sausage<br>
+          <input type="checkbox" name="toppings" value="meat"> Bacon<br>
+          <input type="checkbox" name="toppings" value="meat"> Chicken<br>
+          <input type="checkbox" name="toppings" value="xtra"> Extra Cheese<br>
+        </div>
+        <div class="col-sm">
+          
+        </div>
+        <div class="col-sm">
+          <h6><span id="cost"><!--pizza cost here--></span></h6>
+          <button type="submit" class="btn btn-dark">Add Pizza</button>          
+        </div>
+      </div>
+    </form>
+<!--Order-->
+    <div class="col-sm">
+      
+    </div>
+    <div class="col-sm">
+
+    </div>
+    <div id="order">
+
+    </div>  
+  </div>
+</body>

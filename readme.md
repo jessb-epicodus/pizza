@@ -39,16 +39,16 @@ Expected Output: Pizza {size: 'large', toppings: 'special', price:'12'}
 Code: let pizza2 = new Pizza ("medium", "cheese");
 Expected Output: Pizza {size: 'medium', toppings: 'cheese', price:'10'}
 
-Code: let pizza2 = new Pizza ("small", "cheese");
+Code: let pizza3 = new Pizza ("small", "cheese");
 Expected Output: Pizza {size: 'small', toppings: 'cheese', price:'8'}
 
-Code: let pizza2 = new Pizza ("large", "special");
+Code: let pizza4 = new Pizza ("large", "special");
 Expected Output: Pizza {size: 'large', toppings: 'special', price:'14'}
 
-Code: let pizza2 = new Pizza ("medium", "special");
+Code: let pizza5 = new Pizza ("medium", "special");
 Expected Output: Pizza {size: 'medium', toppings: 'special', price:'12'}
 
-Code: let pizza2 = new Pizza ("small", "special");
+Code: let pizza6 = new Pizza ("small", "special");
 Expected Output: Pizza {size: 'small', toppings: 'special', price:'10'}
 
 ## Known Bugs
@@ -57,7 +57,9 @@ Expected Output: Pizza {size: 'small', toppings: 'special', price:'10'}
 
 ## License
 
+Copyright (c) _Jan 2022_ _Jessica Baker_
+
+## Contact Information
+
 _If you run into any issues or have questions, ideas or concerns or wish to make a contribution to the code see contact information below._
 * Jessica Baker: jessb.epicodus@gmail.com
-
-Copyright (c) _Jan 2022_ _Jessica Baker_
